@@ -8,18 +8,24 @@ react - next.js 14 - tailwind - react-hook-form
 ## Features
 This project consist of three main pages:
 
-1. **Home** 
+1. **Home**
+
 👉 Static rendering page
 
-2. **Contact Us** 
+3. **Contact Us**
+
 👉 Static rendering
+
 👉 Server action
 
-3. **Actions** 
+5. **Actions**
+
 👉 Dynamic rendering: List of activities with simple pagination
+
 👉 Skeleton loader for activities list
 
-4. **Actions Detail Slug**
+7. **Actions Detail Slug**
+
 👉 Dynamic rendering: Information about activity
 
 
