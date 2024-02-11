@@ -1,4 +1,5 @@
-import { HomeHeader, HomeAbout, HomeInfo, AppGetStarted } from '@/components';
+import { AppGetStarted } from '@/components/shared';
+import { HomeHeader, HomeAbout, HomeInfo } from '@/components/specific';
 import { fragmentIds } from '@/lib/utils/fragmentIds';
 
 export default function Home() {

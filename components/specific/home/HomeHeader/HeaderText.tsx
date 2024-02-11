@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import AppFilledButton from '../../AppFilledButton';
+import AppFilledButton from '../../../shared/AppFilledButton';
 import { cursive } from '@/lib/ui/fonts';
 import Link from 'next/link';
 import { fragmentIds } from '@/lib/utils/fragmentIds';

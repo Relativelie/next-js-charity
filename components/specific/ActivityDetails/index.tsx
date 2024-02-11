@@ -1,18 +1,17 @@
 import clsx from 'clsx';
 
-import { Activity } from '@/lib/server/activities/models';
 import { toFormatDate } from '@/lib/utils/toFormatDate';
 import { cursive } from '@/lib/ui/fonts';
+import { getActivity } from '@/lib/server/activities/activities';
+import { ActivityDetailsType } from '@/app/activities/[activitySlug]/page';
 
-type ActivityDetailsProps = {
-  activity: Activity;
-};
-
-const ActivityDetails: React.FC<ActivityDetailsProps> = ({ activity }) => {
-  const { name, date, location, purpose, startTime, endTime } = activity;
+async function ActivityDetails({ params }: ActivityDetailsType) {
+  const { name, date, location, purpose, startTime, endTime } = getActivity(
+    params.activitySlug
+  );
 
   return (
-    <div className="flex flex-col md:gap-10 p-2 md:p-5">
+    <div className="flex flex-col p-2 md:gap-10 md:p-5">
       <h1 className={clsx(cursive.className, 'text-center')}>
         {name.toUpperCase()}
       </h1>
@@ -33,6 +32,6 @@ const ActivityDetails: React.FC<ActivityDetailsProps> = ({ activity }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ActivityDetails;

@@ -1,5 +1,4 @@
-import { AppLoading } from '@/components';
-import React from 'react';
+import { AppLoading } from '@/components/shared';
 
 const Loading = () => {
   return (

@@ -8,7 +8,7 @@ import { schema } from './yupSchema';
 import LabeledInput from './LabeledInput';
 import { sendContactForm } from '@/lib/server/contact/action';
 import { Inputs } from '@/lib/server/contact/models';
-import AppFilledButton from '@/components/AppFilledButton';
+import AppFilledButton from '@/components/shared/AppFilledButton';
 
 const ContactForm = () => {
   const {

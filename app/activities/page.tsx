@@ -2,16 +2,16 @@ import { Suspense } from 'react';
 
 import {
   ActivitiesList,
-  AppPagination,
   ActivitiesHeader,
   ActivitiesListHeader,
   ActivitiesSkeleton,
-} from '@/components';
+} from '@/components/specific';
 import {
   getActivities,
   getActivitiesCount,
 } from '@/lib/server/activities/activities';
 import { fragmentIds } from '@/lib/utils/fragmentIds';
+import { AppPagination } from '@/components/shared';
 
 const limit = 6;
 

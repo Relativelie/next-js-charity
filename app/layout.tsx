@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import clsx from 'clsx';
 
-import { AppNotificationToaster, Footer, MainHeader } from '@/components';
+import {
+  Footer,
+  MainHeader,
+} from '@/components/specific';
 import { openSans } from '../lib/ui/fonts';
 
 import './globals.css';
+import { AppNotificationToaster } from '@/components/shared';
 
 export const metadata: Metadata = {
   title: 'EmpowerKids Zone',

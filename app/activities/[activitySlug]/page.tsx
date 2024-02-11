@@ -1,15 +1,17 @@
-import { getActivity } from '@/lib/server/activities/activities';
-import Image from 'next/image';
-import ActivityImage from '@/public/activity-details-bg.jpg';
-import { ActivityDetails, AppContactUsContainer } from '@/components';
 import { Metadata, ResolvingMetadata } from 'next';
+import Image from 'next/image';
 
-type ActivityDetailsProps = {
-  params: { [key: string]: string };
+import { getActivity } from '@/lib/server/activities/activities';
+import ActivityImage from '@/public/activity-details-bg.jpg';
+import { ActivityDetails } from '@/components/specific';
+import { AppContactUsContainer } from '@/components/shared';
+
+export type ActivityDetailsType = {
+  params: { activitySlug: string };
 };
 
 export async function generateMetadata(
-  { params }: ActivityDetailsProps,
+  { params }: ActivityDetailsType,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const activity = getActivity(params.activitySlug);
@@ -19,9 +21,7 @@ export async function generateMetadata(
   };
 }
 
-export default function ActivityDetailsPage({ params }: ActivityDetailsProps) {
-  const activity = getActivity(params.activitySlug);
-
+export default function ActivityDetailsPage({ params }: ActivityDetailsType) {
   return (
     <main className="relative flex h-screen flex-col items-center justify-center">
       <Image
@@ -29,11 +29,12 @@ export default function ActivityDetailsPage({ params }: ActivityDetailsProps) {
         alt="Activity background"
         fill
         className="z-[-1] object-cover brightness-50"
-        sizes='(max-width: 768px) 70vw, (max-width: 1200px) 45vw'
+        sizes="(max-width: 768px) 70vw, (max-width: 1200px) 45vw"
       />
 
-      <div className="flex md:h-2/3 md:w-2/3 flex-col justify-between rounded-lg bg-senary/90">
-        <ActivityDetails activity={activity} />
+      <div className="flex flex-col justify-between rounded-lg bg-senary/90 md:h-2/3 md:w-2/3">
+        <ActivityDetails params={params} />
+
         <AppContactUsContainer />
       </div>
     </main>

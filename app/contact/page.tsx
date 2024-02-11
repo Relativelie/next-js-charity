@@ -1,4 +1,4 @@
-import { ContactForm, ContactHeader } from '@/components';
+import { ContactForm, ContactHeader } from '@/components/specific';
 
 export default function ContactPage() {
   return (

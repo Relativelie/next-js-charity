@@ -11,11 +11,6 @@ import HomeInfo from './home/HomeInfo';
 import Footer from './Footer';
 import MainHeader from './MainHeader';
 
-import AppContactUsContainer from './AppContactUsContainer';
-import AppGetStarted from './AppGetStarted';
-import AppLoading from './AppLoading';
-import AppNotificationToaster from './AppNotificationToaster';
-import AppPagination from './AppPagination';
 import ContactHeader from './Contact/Header';
 import ContactForm from './Contact/ContactForm';
 
@@ -30,11 +25,6 @@ export {
   HomeHeader,
   HomeAbout,
   ContactHeader,
-  ContactForm,
+  ContactForm as ContactForm,
   Footer,
-  AppContactUsContainer,
-  AppGetStarted,
-  AppPagination,
-  AppNotificationToaster,
-  AppLoading,
 };
