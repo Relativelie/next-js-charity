@@ -17,6 +17,7 @@ This project consist of three main pages:
 
 3. **Actions** 
 👉 Dynamic rendering: List of activities with simple pagination
+👉 Skeleton loader for activities list
 
 4. **Actions Detail Slug**
 👉 Dynamic rendering: Information about activity
